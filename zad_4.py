@@ -22,9 +22,10 @@ def factorial(n):
 
 def print_sequence(generator, elements):
     for i, number in enumerate(generator()):
-        print(f"{i + 1}: {number}")
+        print(f"{i + 1}: {number}", end=" ")
         if i == elements - 1:
             break
+    print()
 
 
 if __name__ == "__main__":
