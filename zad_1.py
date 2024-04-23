@@ -1,5 +1,4 @@
-from match import match
-from typing import List, Dict
+from typing import List
 
 
 def acronym(my_list: List[str]) -> str:
@@ -61,4 +60,4 @@ print(acronym_with_mapping(["Centralne", "Biuro", "Antykorupcyjne"]))
 print(median([1, 2, 3, 4, 5]))
 print(square_root(3.0, 0.1))
 print(make_alpha_dic("on i ona"))
-print(flatten([[1,4],2,3,[5,6]]))
+print(flatten([[1, 4], 2, 3, [5, 6]]))

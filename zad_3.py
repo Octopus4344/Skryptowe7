@@ -12,10 +12,7 @@ class PasswordGenerator():
         return self
 
     def __next__(self):
-        if self.count<=0:
+        if self.count <= 0:
             raise StopIteration()
-        self.count-=1
+        self.count -= 1
         return ''.join(random.choice(self.charset) for _ in range(self.length))
-
-
-

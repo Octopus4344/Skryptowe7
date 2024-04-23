@@ -1,6 +1,3 @@
-from match import match
-
-
 def forall(pred, iterable):
     for i in iterable:
         if not pred(i): return False
