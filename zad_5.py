@@ -1,6 +1,6 @@
 from functools import cache
 
-from zad_4 import fibonacci
+from zad_4 import fibonacci, make_generator
 from zad_4 import print_sequence
 
 
@@ -9,13 +9,7 @@ def make_generator_mem(f):
     def memoized_f(n):
         return f(n)
 
-    def generator():
-        n = 1
-        while True:
-            yield memoized_f(n)
-            n += 1
-
-    return generator
+    return make_generator(memoized_f)
 
 
 if __name__ == "__main__":
