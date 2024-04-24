@@ -38,7 +38,7 @@ def atmost(n, pred, iterable):
         if pred(i):
             k += 1
             if k >= n: return False
-    return False
+    return True
 
 def atmost_sum(n, pred, iterable):
     count = sum(1 for item in iterable if pred(item))
