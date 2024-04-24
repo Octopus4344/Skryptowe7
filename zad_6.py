@@ -18,7 +18,7 @@ def log(log_level):
 
             if isinstance(func_or_class, type):
                 logger.log(log_level,
-                           f"{start_date}: Class instance of {func_or_class.__name__} created with args: {args}, kwargs: {kwargs}")
+                           f"{start_date}: Class instance of {func_or_class.__name__} created with args: {args}, kwargs: {kwargs}, returned {result}; took {duration} seconds")
             else:
                 logger.log(log_level,
                            f"{start_date}: Function {func_or_class.__name__} called with args: {args}, kwargs: {kwargs}; returned {result}; took {duration} seconds")
