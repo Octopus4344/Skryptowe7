@@ -1,7 +1,11 @@
+import logging
 import random
 import string
 
+from zad_6 import log
 
+
+@log(logging.INFO)
 class PasswordGenerator():
     def __init__(self, length, count, charset=string.ascii_letters + string.digits):
         self.length = length

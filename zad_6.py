@@ -16,8 +16,12 @@ def log(log_level):
             end_time = time.time()
             duration = end_time - start_time
 
-            logger.log(log_level,
-                       f"{start_date}: Function {func_or_class.__name__} called with args: {args}, kwargs: {kwargs}; returned {result}; took {duration} seconds")
+            if isinstance(func_or_class, type):
+                logger.log(log_level,
+                           f"{start_date}: Class instance of {func_or_class.__name__} created with args: {args}, kwargs: {kwargs}")
+            else:
+                logger.log(log_level,
+                           f"{start_date}: Function {func_or_class.__name__} called with args: {args}, kwargs: {kwargs}; returned {result}; took {duration} seconds")
             return result
 
         return wrapper

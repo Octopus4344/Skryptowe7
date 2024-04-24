@@ -1,4 +1,13 @@
+import logging
+
 from zad_3 import PasswordGenerator
+
+formatter = logging.Formatter('%(message)s')
+
+logging.basicConfig(level=logging.INFO)
+
+for handler in logging.root.handlers:
+    handler.setFormatter(formatter)
 
 passwordGenerator = PasswordGenerator(9, 9)
 
