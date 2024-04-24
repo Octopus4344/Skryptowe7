@@ -19,7 +19,7 @@ def exist_any(pred, iterable):
 
 
 def atleast(n, pred, iterable):
-    k = 0;
+    k = 0
     for i in iterable:
         if pred(i):
             k += 1
@@ -33,7 +33,7 @@ def atleast_sum(n, pred, iterable):
 
 
 def atmost(n, pred, iterable):
-    k = 0;
+    k = 0
     for i in iterable:
         if pred(i):
             k += 1
